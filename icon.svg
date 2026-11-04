@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7" />
+      <stop offset="100%" stop-color="#0369a1" />
+    </linearGradient>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#020617" />
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="128" fill="url(#bgGrad)" />
+  <!-- Credit Card Silhouette -->
+  <rect x="76" y="146" width="360" height="220" rx="24" fill="url(#cardGrad)" stroke="#38bdf8" stroke-width="8" />
+  <!-- Magnetic stripe -->
+  <rect x="76" y="200" width="360" height="40" fill="#0c4a6e" />
+  <!-- Chip -->
+  <rect x="120" y="260" width="54" height="42" rx="8" fill="#fbbf24" stroke="#d97706" stroke-width="3" />
+  <!-- Dollar Symbol -->
+  <text x="370" y="310" font-family="system-ui, -apple-system, sans-serif" font-size="72" font-weight="900" fill="#ffffff" text-anchor="middle">$</text>
+  <!-- Airplane icon in corner -->
+  <path d="M400 110 L430 130 L410 140 L420 160 L405 155 L395 170 L390 150 L360 140 Z" fill="#38bdf8" />
+</svg>

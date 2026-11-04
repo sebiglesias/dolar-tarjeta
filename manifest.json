@@ -1,0 +1,18 @@
+{
+  "name": "Calculadora Dólar Tarjeta",
+  "short_name": "Dólar Tarjeta",
+  "description": "Calculá el costo final en pesos de compras con tarjeta en el exterior, streaming y viajes, con comparativa Dólar MEP.",
+  "start_url": "/dolar-tarjeta/",
+  "scope": "/dolar-tarjeta/",
+  "display": "standalone",
+  "background_color": "#090d16",
+  "theme_color": "#0ea5e9",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

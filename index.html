@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+  <!-- Google tag (gtag.js) GA4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2BNDBQP0W7"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-2BNDBQP0W7');
+  </script>
+  <!-- Google AdSense -->
+  <meta name="google-adsense-account" content="ca-pub-3381238987477190">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3381238987477190" crossorigin="anonymous"></script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Dólar Tarjeta, Streaming y Viajes 2026 | ¿Pagar con MEP o Tarjeta?</title>
+  <meta name="description" content="Calculá el costo exacto en pesos de tus compras con tarjeta en el exterior, streaming (Netflix, Spotify, Steam) y viajes a Brasil o Uruguay. Comparativa en vivo: cuánto ahorrás pagando tu resumen con Dólar MEP.">
+  <meta name="keywords" content="calculadora dolar tarjeta, cuanto cuesta el dolar tarjeta hoy, dolar streaming netflix spotify, pagar tarjeta con mep, percepcion arca 30 por ciento, compras exterior tarjeta credito, cotizacion dolar tarjeta argentina">
+  <meta name="author" content="Sebastián Iglesias">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+
+  <!-- PWA -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#090d16">
+  <link rel="apple-touch-icon" href="icon.svg">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://sebiglesias.com.ar/dolar-tarjeta/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sebiglesias.com.ar/dolar-tarjeta/">
+  <meta property="og:title" content="Calculadora de Dólar Tarjeta y Gastos en el Exterior 2026">
+  <meta property="og:description" content="Calculá tus gastos en el exterior y streaming en pesos. Comparativa de ahorro pagando con Dólar MEP.">
+  <meta property="og:locale" content="es_AR">
+
+  <!-- Fonts & Styles -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-dark: #070a12;
+      --bg-card: #0f1624;
+      --bg-card-subtle: #141d30;
+      --border-color: rgba(255, 255, 255, 0.08);
+      --border-highlight: rgba(56, 189, 248, 0.3);
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --accent-blue: #38bdf8;
+      --accent-green: #10b981;
+      --accent-emerald: #059669;
+      --accent-purple: #a855f7;
+      --accent-amber: #f59e0b;
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      line-height: 1.6;
+      min-height: 100vh;
+      padding: clamp(1rem, 3vw, 2.5rem) 1rem 4rem;
+    }
+
+    .container {
+      max-width: 820px;
+      margin: 0 auto;
+    }
+
+    /* Header */
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 12px;
+      border-radius: 9999px;
+      background: rgba(56, 189, 248, 0.1);
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      color: var(--accent-blue);
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 0.8rem;
+    }
+    h1 {
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+      margin-bottom: 0.6rem;
+      background: linear-gradient(135deg, #ffffff 40%, #94a3b8 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .lead {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* Live Rates Bar */
+    .rates-bar {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 10px;
+      margin-bottom: 2rem;
+    }
+    .rate-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-sm);
+      padding: 10px 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .rate-label {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-weight: 600;
+    }
+    .rate-val {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 1.18rem;
+      font-weight: 700;
+      color: #fff;
+    }
+    .rate-sub {
+      font-size: 0.7rem;
+      color: var(--text-muted);
+    }
+
+    /* Tabs */
+    .tabs {
+      display: flex;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-sm);
+      padding: 4px;
+      gap: 4px;
+      margin-bottom: 1.5rem;
+    }
+    .tab-btn {
+      flex: 1;
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      padding: 10px 12px;
+      border-radius: 6px;
+      font-family: inherit;
+      font-size: 0.88rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+    .tab-btn.active {
+      background: var(--accent-blue);
+      color: #04101e;
+      font-weight: 700;
+    }
+
+    /* Main Calculator Card */
+    .calc-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: clamp(1.4rem, 3vw, 2rem);
+      margin-bottom: 2rem;
+      box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+    }
+
+    .form-group {
+      margin-bottom: 1.4rem;
+    }
+    label {
+      display: block;
+      font-size: 0.84rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.5rem;
+    }
+    .input-wrapper {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+    .currency-symbol {
+      position: absolute;
+      left: 16px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--accent-blue);
+    }
+    input[type="number"], select {
+      width: 100%;
+      background: var(--bg-card-subtle);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      color: #fff;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 1.35rem;
+      font-weight: 700;
+      padding: 14px 16px 14px 44px;
+      outline: none;
+      transition: border-color 0.2s ease;
+    }
+    select {
+      font-size: 0.95rem;
+      font-family: inherit;
+      padding-left: 16px;
+      cursor: pointer;
+    }
+    input[type="number"]:focus, select:focus {
+      border-color: var(--accent-blue);
+    }
+
+    /* Presets Pills */
+    .presets-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 0.8rem;
+    }
+    .preset-pill {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--border-color);
+      color: var(--text-muted);
+      padding: 6px 12px;
+      border-radius: 9999px;
+      font-size: 0.8rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .preset-pill:hover, .preset-pill.active {
+      background: rgba(56, 189, 248, 0.12);
+      border-color: var(--accent-blue);
+      color: #fff;
+    }
+
+    /* Results Box */
+    .result-box {
+      background: linear-gradient(145deg, #0f1c30 0%, #0c1524 100%);
+      border: 1px solid var(--border-highlight);
+      border-radius: var(--radius-md);
+      padding: 1.6rem;
+      margin-top: 1.6rem;
+    }
+    .result-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 1.2rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .result-title {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent-blue);
+      font-weight: 700;
+    }
+    .result-total {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: clamp(1.8rem, 5vw, 2.4rem);
+      font-weight: 800;
+      color: #fff;
+    }
+    .breakdown-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.88rem;
+      padding: 6px 0;
+      color: var(--text-muted);
+    }
+    .breakdown-row.strong {
+      color: #fff;
+      font-weight: 600;
+      border-top: 1px dashed rgba(255, 255, 255, 0.1);
+      margin-top: 6px;
+      padding-top: 10px;
+    }
+    .breakdown-val {
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 600;
+      color: #e2e8f0;
+    }
+
+    /* MEP Comparison Box */
+    .mep-box {
+      margin-top: 1.4rem;
+      background: rgba(16, 185, 129, 0.06);
+      border: 1px solid rgba(16, 185, 129, 0.25);
+      border-radius: var(--radius-md);
+      padding: 1.2rem 1.4rem;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .mep-title {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--accent-green);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .mep-savings {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: #fff;
+    }
+    .mep-desc {
+      font-size: 0.82rem;
+      color: #94a3b8;
+      line-height: 1.5;
+    }
+
+    /* Instructions & Accordions */
+    .seo-section {
+      margin-top: 2rem;
+    }
+    .section-heading {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 1rem;
+    }
+    .card-guide {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 1.4rem;
+      margin-bottom: 1rem;
+    }
+    .card-guide h3 {
+      font-size: 1rem;
+      color: var(--accent-blue);
+      margin-bottom: 0.5rem;
+    }
+    .card-guide p, .card-guide li {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+    .card-guide ul, .card-guide ol {
+      margin-left: 1.2rem;
+      margin-top: 0.4rem;
+    }
+
+    /* Ad Slot Container */
+    .ad-slot-container {
+      margin: 32px auto 24px;
+      padding: 16px;
+      max-width: 728px;
+      background: rgba(125,125,125,0.05);
+      border: 1px dashed rgba(125,125,125,0.2);
+      border-radius: 8px;
+      text-align: center;
+      min-height: 100px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .ad-disclaimer {
+      font-size: 0.7rem;
+      color: #888;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 8px;
+    }
+
+    /* Footer */
+    footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border-color);
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.82rem;
+    }
+    footer a { color: var(--accent-blue); text-decoration: none; }
+  </style>
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Calculadora de Dólar Tarjeta Argentina 2026",
+      "description": "Calculadora de compras con tarjeta en el exterior, plataformas de streaming y comparador de ahorro pagando con Dólar MEP.",
+      "url": "https://sebiglesias.com.ar/dolar-tarjeta/",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Any",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "ARS"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Cómo se calcula el dólar tarjeta en Argentina?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "El dólar tarjeta se calcula tomando la cotización del dólar oficial minorista vendedor (BNA) y sumándole la percepción del 30% a cuenta de Ganancias o Bienes Personales reglamentada por la Resolución General 5463 de ARCA."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Conviene pagar el resumen de la tarjeta con dólares MEP o en pesos?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Conviene pagar en dólares usando Dólar MEP siempre que la cotización del MEP sea menor al dólar tarjeta oficial. Para hacerlo, debés realizar el Stop Debit en tu home banking antes del vencimiento y pagar el saldo en USD con los dólares en tu cuenta."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cómo se calculan los gastos con tarjeta en Brasil (Reales) o Uruguay?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Los consumos en monedas extranjeras (Reales, Euros o Pesos Uruguayos) son convertidos por Visa o Mastercard a dólares estadounidenses al tipo de cambio oficial internacional del día, y luego liquidados en tu resumen como consumo en USD."
+          }
+        }
+      ]
+    }
+  ]
+  </script>
+</head>
+<body>
+
+<div class="container">
+  <header>
+    <div class="badge">🇦🇷 Finanzas & Viajes 2026</div>
+    <h1>Calculadora Dólar Tarjeta</h1>
+    <p class="lead">Calculá el costo final en pesos de tus compras en el exterior, streaming y viajes, o cuánto ahorrás pagando tu resumen con Dólar MEP.</p>
+  </header>
+
+  <!-- Live Rates Status -->
+  <div class="rates-bar">
+    <div class="rate-card">
+      <span class="rate-label">Oficial BNA</span>
+      <span class="rate-val" id="rateOficial">$1.025</span>
+      <span class="rate-sub">Tipo de cambio base</span>
+    </div>
+    <div class="rate-card">
+      <span class="rate-label">Dólar Tarjeta</span>
+      <span class="rate-val" id="rateTarjeta" style="color:var(--accent-blue)">$1.332,50</span>
+      <span class="rate-sub">Oficial + 30% ARCA</span>
+    </div>
+    <div class="rate-card">
+      <span class="rate-label">Dólar MEP</span>
+      <span class="rate-val" id="rateMep" style="color:var(--accent-green)">$1.155</span>
+      <span class="rate-sub">Bolsa / ALyC</span>
+    </div>
+    <div class="rate-card">
+      <span class="rate-label">Ahorro con MEP</span>
+      <span class="rate-val" id="rateBrecha" style="color:var(--accent-amber)">-13,3%</span>
+      <span class="rate-sub">Ventaja frente a Tarjeta</span>
+    </div>
+  </div>
+
+  <!-- Calculator Tabs -->
+  <div class="tabs">
+    <button class="tab-btn active" data-mode="usd">💵 Compras en USD</button>
+    <button class="tab-btn" data-mode="travel">✈️ Viajes (Reales / Euros)</button>
+    <button class="tab-btn" data-mode="stream">🎬 Streaming & Apps</button>
+  </div>
+
+  <div class="calc-card">
+    <!-- Travel Currency Selector (Hidden in USD/Stream modes) -->
+    <div class="form-group" id="groupCurrency" style="display:none">
+      <label for="currencySelect">Moneda del Gasto Local</label>
+      <select id="currencySelect">
+        <option value="BRL" data-rate="0.17">🇧🇷 Reales Brasileños (R$)</option>
+        <option value="EUR" data-rate="1.09">🇪🇺 Euros (€)</option>
+        <option value="UYU" data-rate="0.024">🇺🇾 Pesos Uruguayos ($U)</option>
+        <option value="CLP" data-rate="0.00105">🇨🇱 Pesos Chilenos (CLP)</option>
+      </select>
+    </div>
+
+    <!-- Amount Input -->
+    <div class="form-group">
+      <label id="inputLabel" for="amountInput">Importe en Dólares (USD)</label>
+      <div class="input-wrapper">
+        <span class="currency-symbol" id="symbolDisplay">US$</span>
+        <input type="number" id="amountInput" value="50" min="0" step="any" placeholder="0.00">
+      </div>
+    </div>
+
+    <!-- Presets -->
+    <div id="presetsUsd" class="presets-grid">
+      <button class="preset-pill" data-val="10">US$ 10</button>
+      <button class="preset-pill active" data-val="50">US$ 50</button>
+      <button class="preset-pill" data-val="100">US$ 100</button>
+      <button class="preset-pill" data-val="300">US$ 300 (Franquicia)</button>
+      <button class="preset-pill" data-val="1000">US$ 1.000</button>
+    </div>
+
+    <div id="presetsStream" class="presets-grid" style="display:none">
+      <button class="preset-pill" data-val="20" data-name="ChatGPT Plus">🤖 ChatGPT Plus ($20)</button>
+      <button class="preset-pill" data-val="15" data-name="Steam / Juegos">🎮 Steam / PlayStation ($15)</button>
+      <button class="preset-pill" data-val="9.99" data-name="Apple iCloud / Google">☁️ iCloud / Google One ($9.99)</button>
+      <button class="preset-pill" data-val="12" data-name="Spotify / YouTube">🎵 Spotify / YouTube ($12)</button>
+      <button class="preset-pill" data-val="35" data-name="Suscripciones varias">📦 Pack Suscripciones ($35)</button>
+    </div>
+
+    <div id="presetsTravel" class="presets-grid" style="display:none">
+      <button class="preset-pill" data-val="100">R$ 100 (Cena simple)</button>
+      <button class="preset-pill" data-val="500">R$ 500 (Supermercado)</button>
+      <button class="preset-pill" data-val="2500">R$ 2.500 (Alojamiento semana)</button>
+    </div>
+
+    <!-- Results Breakdown -->
+    <div class="result-box">
+      <div class="result-header">
+        <div>
+          <span class="result-title">Total con Dólar Tarjeta</span>
+          <div style="font-size:0.75rem; color:var(--text-muted)">Si dejás que debite en pesos automáticamente</div>
+        </div>
+        <div class="result-total" id="displayTotalArs">$66.625</div>
+      </div>
+
+      <div class="breakdown-row" id="rowOriginalCur" style="display:none">
+        <span>Gasto original:</span>
+        <span class="breakdown-val" id="valOriginalCur">R$ 0,00</span>
+      </div>
+      <div class="breakdown-row">
+        <span>Equivalente en Dólares:</span>
+        <span class="breakdown-val" id="valUsd">US$ 50,00</span>
+      </div>
+      <div class="breakdown-row">
+        <span>Subtotal oficial (BNA Vendedor):</span>
+        <span class="breakdown-val" id="valSubtotal">$51.250</span>
+      </div>
+      <div class="breakdown-row">
+        <span>Percepción Ganancias / Bienes Personales (30% ARCA):</span>
+        <span class="breakdown-val" id="valPercepcion">$15.375</span>
+      </div>
+      <div class="breakdown-row strong">
+        <span>Total Tarjeta en el resumen:</span>
+        <span class="breakdown-val" id="valFinalArs">$66.625</span>
+      </div>
+    </div>
+
+    <!-- Smart MEP Savings Box -->
+    <div class="mep-box">
+      <div class="mep-title">
+        <span>💡 Estrategia de Ahorro: Pagar con Dólar MEP</span>
+      </div>
+      <div class="mep-savings" id="mepSavingsDisplay">
+        Ahorrás $8.875 ARS pagando en USD
+      </div>
+      <p class="mep-desc" id="mepDescText">
+        Si comprás dólares MEP a través de tu home banking o ALyC ($1.155) y cancelás el saldo en USD antes del vencimiento, pagás <strong>$57.750</strong> en lugar de <strong>$66.625</strong>.
+      </p>
+    </div>
+  </div>
+
+  <!-- In-Page Responsive AdSense Slot -->
+  <div class="ad-slot-container">
+    <div class="ad-disclaimer">Publicidad</div>
+    <ins class="adsbygoogle"
+         style="display:block; width: 100%;"
+         data-ad-client="ca-pub-3381238987477190"
+         data-ad-slot="9270280155"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </div>
+
+  <!-- Guides & FAQs -->
+  <section class="seo-section">
+    <h2 class="section-heading">📖 Guía y Preguntas Frecuentes sobre el Dólar Tarjeta</h2>
+
+    <div class="card-guide">
+      <h3>¿Cómo pagar el resumen con Dólar MEP para no pagar impuestos?</h3>
+      <p>Pagar tu tarjeta en dólares es 100% legal y permite evitar la percepción del 30%:</p>
+      <ol>
+        <li><strong>Comprá dólares MEP</strong> en tu banco o ALyC por el monto exacto en dólares que figura en tu resumen.</li>
+        <li><strong>Hacé el Stop Debit</strong> en tu home banking antes de la fecha de vencimiento (para evitar que el banco debite automáticamente en pesos aplicando el dólar tarjeta).</li>
+        <li><strong>Pagá el saldo en dólares</strong> usando los dólares de tu caja de ahorro en USD.</li>
+        <li><strong>Pagá el saldo en pesos descontando el 30%</strong> de percepción que te habían liquidado preliminarmente.</li>
+      </ol>
+    </div>
+
+    <div class="card-guide">
+      <h3>¿Cómo se calculan los consumos en Reales (Brasil) o Pesos Uruguayos?</h3>
+      <p>
+        Cuando pagás con tarjeta en Brasil o Uruguay, el comercio te cobra en moneda local (Reales o Pesos Uruguayos). La red internacional (Visa o Mastercard) convierte ese consumo a <strong>dólares estadounidenses (USD)</strong> según la cotización cambiaria de Wall Street del día del cierre. Luego, tu banco en Argentina te presenta el saldo en USD.
+      </p>
+    </div>
+
+    <div class="card-guide">
+      <h3>¿Se puede pedir la devolución del 30% de percepción de ARCA?</h3>
+      <p>
+        Sí. Al finalizar el año calendario, quienes no pagan Impuesto a las Ganancias ni Bienes Personales pueden solicitar la devolución de las percepciones aplicadas a través del servicio web *"Devolución de Percepciones"* con Clave Fiscal en el portal de ARCA (ex AFIP).
+      </p>
+    </div>
+  </section>
+
+  <!-- Family Interlinking Nav (SEO Cluster: Finanzas) -->
+  <nav class="family-nav" aria-label="📈 Calculadoras Financieras y Tasas Argentina" style="margin: 32px auto 20px; padding: 20px 16px; max-width: 800px; border-top: 1px solid rgba(125,125,125,0.2); text-align: left;">
+    <span style="display: block; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.1em; color: #888; font-weight: 700; margin-bottom: 12px;">📈 Calculadoras Financieras y Tasas Argentina</span>
+    <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+      <span style="padding: 6px 12px; border-radius: 6px; font-size: 0.82rem; font-weight: 700; background: rgba(234, 88, 12, 0.15); border: 1px solid #ea580c; color: #ea580c;">💳 Dólar Tarjeta</span>
+      <a href="https://sebiglesias.com.ar/billeteras/" style="padding: 6px 12px; border-radius: 6px; font-size: 0.82rem; font-weight: 500; text-decoration: none; color: inherit; background: rgba(125,125,125,0.08); border: 1px solid rgba(125,125,125,0.2); transition: all 0.2s;">📱 Rendimiento Billeteras</a>
+      <a href="https://sebiglesias.com.ar/plazo-fijo/" style="padding: 6px 12px; border-radius: 6px; font-size: 0.82rem; font-weight: 500; text-decoration: none; color: inherit; background: rgba(125,125,125,0.08); border: 1px solid rgba(125,125,125,0.2); transition: all 0.2s;">🏦 Plazo Fijo</a>
+      <a href="https://sebiglesias.com.ar/hipotecario-uva/" style="padding: 6px 12px; border-radius: 6px; font-size: 0.82rem; font-weight: 500; text-decoration: none; color: inherit; background: rgba(125,125,125,0.08); border: 1px solid rgba(125,125,125,0.2); transition: all 0.2s;">🏠 Crédito UVA</a>
+      <a href="https://sebiglesias.com.ar/alquileres/" style="padding: 6px 12px; border-radius: 6px; font-size: 0.82rem; font-weight: 500; text-decoration: none; color: inherit; background: rgba(125,125,125,0.08); border: 1px solid rgba(125,125,125,0.2); transition: all 0.2s;">🔑 ICL Alquileres</a>
+      <a href="https://sebiglesias.com.ar/cuotas/" style="padding: 6px 12px; border-radius: 6px; font-size: 0.82rem; font-weight: 500; text-decoration: none; color: inherit; background: rgba(125,125,125,0.08); border: 1px solid rgba(125,125,125,0.2); transition: all 0.2s;">💳 Cuotas vs Contado</a>
+      <a href="https://sebiglesias.com.ar/inflacion/" style="padding: 6px 12px; border-radius: 6px; font-size: 0.82rem; font-weight: 500; text-decoration: none; color: inherit; background: rgba(125,125,125,0.08); border: 1px solid rgba(125,125,125,0.2); transition: all 0.2s;">📊 Inflación IPC</a>
+      <a href="https://sebiglesias.com.ar/intereses-judiciales/" style="padding: 6px 12px; border-radius: 6px; font-size: 0.82rem; font-weight: 500; text-decoration: none; color: inherit; background: rgba(125,125,125,0.08); border: 1px solid rgba(125,125,125,0.2); transition: all 0.2s;">⚖️ Intereses Judiciales</a>
+    </div>
+  </nav>
+
+  <footer>
+    <p>Hecho con ❤️ por <a href="https://sebiglesias.com.ar" target="_blank" rel="noopener">Sebastián Iglesias</a> · Datos de cotizaciones en tiempo real.</p>
+  </footer>
+</div>
+
+<script>
+// State
+let rates = {
+  oficial: 1025,
+  tarjeta: 1332.50,
+  mep: 1155,
+  currencies: {
+    BRL: 0.173,  // 1 BRL in USD (~5.78 BRL per USD)
+    EUR: 1.088,  // 1 EUR in USD
+    UYU: 0.024,  // 1 UYU in USD (~41.5 UYU per USD)
+    CLP: 0.00105 // 1 CLP in USD
+  }
+};
+
+let currentMode = 'usd';
+
+// Fetch Live Rates
+async function fetchRates() {
+  try {
+    const res = await fetch('https://dolarapi.com/v1/dolares');
+    if (res.ok) {
+      const data = await res.json();
+      const of = data.find(d => d.casa === 'oficial');
+      const tar = data.find(d => d.casa === 'tarjeta');
+      const bolsa = data.find(d => d.casa === 'bolsa');
+      if (of) rates.oficial = of.venta;
+      if (tar) rates.tarjeta = tar.venta;
+      if (bolsa) rates.mep = bolsa.venta;
+      updateRatesDisplay();
+      calculate();
+    }
+  } catch (e) {
+    console.log('Using baseline rates', e);
+  }
+}
+
+function updateRatesDisplay() {
+  const formatArs = n => '$' + Math.round(n).toLocaleString('es-AR');
+  document.getElementById('rateOficial').textContent = formatArs(rates.oficial);
+  document.getElementById('rateTarjeta').textContent = formatArs(rates.tarjeta);
+  document.getElementById('rateMep').textContent = formatArs(rates.mep);
+  
+  const brecha = ((rates.mep - rates.tarjeta) / rates.tarjeta) * 100;
+  const brechaEl = document.getElementById('rateBrecha');
+  brechaEl.textContent = `${brecha.toFixed(1)}%`;
+  brechaEl.style.color = brecha < 0 ? '#10b981' : '#f59e0b';
+}
+
+function calculate() {
+  const rawInput = parseFloat(document.getElementById('amountInput').value) || 0;
+  let usdAmount = rawInput;
+  let originalCurLabel = '';
+  
+  if (currentMode === 'travel') {
+    const curCode = document.getElementById('currencySelect').value;
+    const curMultiplier = rates.currencies[curCode] || 1;
+    usdAmount = rawInput * curMultiplier;
+    originalCurLabel = `${curCode} ${rawInput.toLocaleString('es-AR', {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
+    
+    document.getElementById('rowOriginalCur').style.display = 'flex';
+    document.getElementById('valOriginalCur').textContent = originalCurLabel;
+  } else {
+    document.getElementById('rowOriginalCur').style.display = 'none';
+  }
+
+  // Tarjeta calculations (30% Percepcion ARCA)
+  const subtotalOficial = usdAmount * rates.oficial;
+  const percepcionArca = subtotalOficial * 0.30;
+  const totalTarjetaArs = subtotalOficial + percepcionArca;
+
+  // MEP Alternative
+  const totalMepArs = usdAmount * rates.mep;
+  const mepSavings = totalTarjetaArs - totalMepArs;
+  const mepSavingsPct = totalTarjetaArs > 0 ? (mepSavings / totalTarjetaArs) * 100 : 0;
+
+  // Render Breakdown
+  const fmt = n => '$' + Math.round(n).toLocaleString('es-AR');
+  const fmtUsd = n => 'US$ ' + n.toLocaleString('es-AR', {minimumFractionDigits: 2, maximumFractionDigits: 2});
+
+  document.getElementById('valUsd').textContent = fmtUsd(usdAmount);
+  document.getElementById('valSubtotal').textContent = fmt(subtotalOficial);
+  document.getElementById('valPercepcion').textContent = fmt(percepcionArca);
+  document.getElementById('valFinalArs').textContent = fmt(totalTarjetaArs);
+  document.getElementById('displayTotalArs').textContent = fmt(totalTarjetaArs);
+
+  // Render MEP Savings
+  const mepDisplay = document.getElementById('mepSavingsDisplay');
+  const mepText = document.getElementById('mepDescText');
+
+  if (mepSavings > 0) {
+    mepDisplay.textContent = `Ahorrás ${fmt(mepSavings)} ARS (-${mepSavingsPct.toFixed(1)}%) con MEP`;
+    mepDisplay.style.color = 'var(--accent-green)';
+    mepText.innerHTML = `Si pagás tu resumen en dólares comprando MEP en tu banco o ALyC (${fmt(rates.mep)}/USD), pagás <strong>${fmt(totalMepArs)}</strong> en lugar de <strong>${fmt(totalTarjetaArs)}</strong>.`;
+  } else {
+    mepDisplay.textContent = `Conviene pagar directamente en pesos con tarjeta`;
+    mepDisplay.style.color = 'var(--accent-blue)';
+    mepText.innerHTML = `Actualmente la cotización del dólar tarjeta (${fmt(rates.tarjeta)}) es más baja o similar a la del dólar MEP (${fmt(rates.mep)}).`;
+  }
+}
+
+// Event Listeners
+document.getElementById('amountInput').addEventListener('input', calculate);
+document.getElementById('currencySelect').addEventListener('change', () => {
+  const cur = document.getElementById('currencySelect').value;
+  document.getElementById('symbolDisplay').textContent = cur === 'BRL' ? 'R$' : (cur === 'EUR' ? '€' : '$');
+  calculate();
+});
+
+// Mode Switching
+document.querySelectorAll('.tab-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    currentMode = btn.dataset.mode;
+
+    const groupCurrency = document.getElementById('groupCurrency');
+    const presetsUsd = document.getElementById('presetsUsd');
+    const presetsStream = document.getElementById('presetsStream');
+    const presetsTravel = document.getElementById('presetsTravel');
+    const inputLabel = document.getElementById('inputLabel');
+    const symbolDisplay = document.getElementById('symbolDisplay');
+
+    if (currentMode === 'usd') {
+      groupCurrency.style.display = 'none';
+      presetsUsd.style.display = 'flex';
+      presetsStream.style.display = 'none';
+      presetsTravel.style.display = 'none';
+      inputLabel.textContent = 'Importe en Dólares (USD)';
+      symbolDisplay.textContent = 'US$';
+      document.getElementById('amountInput').value = 50;
+    } else if (currentMode === 'stream') {
+      groupCurrency.style.display = 'none';
+      presetsUsd.style.display = 'none';
+      presetsStream.style.display = 'flex';
+      presetsTravel.style.display = 'none';
+      inputLabel.textContent = 'Costo Mensual de la Suscripción (USD)';
+      symbolDisplay.textContent = 'US$';
+      document.getElementById('amountInput').value = 20;
+    } else if (currentMode === 'travel') {
+      groupCurrency.style.display = 'block';
+      presetsUsd.style.display = 'none';
+      presetsStream.style.display = 'none';
+      presetsTravel.style.display = 'flex';
+      inputLabel.textContent = 'Gasto en Moneda Local del País de Destino';
+      const cur = document.getElementById('currencySelect').value;
+      symbolDisplay.textContent = cur === 'BRL' ? 'R$' : (cur === 'EUR' ? '€' : '$');
+      document.getElementById('amountInput').value = 100;
+    }
+    calculate();
+  });
+});
+
+// Presets Listeners
+document.querySelectorAll('.preset-pill').forEach(pill => {
+  pill.addEventListener('click', (e) => {
+    const parent = pill.closest('.presets-grid');
+    parent.querySelectorAll('.preset-pill').forEach(p => p.classList.remove('active'));
+    pill.classList.add('active');
+    document.getElementById('amountInput').value = pill.dataset.val;
+    calculate();
+  });
+});
+
+// Init
+updateRatesDisplay();
+calculate();
+fetchRates();
+
+// PWA Service Worker
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('sw.js').catch(() => {});
+}
+</script>
+</body>
+</html>
